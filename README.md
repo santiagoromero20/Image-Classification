@@ -1,14 +1,15 @@
-# Image Classification
+# **Image Classification**
 
 The main goal of this project was te get familiar with other steps of  ML project. Here I focused mostly on the Deploymeny and Testing. I used an already trained model, Resnet, to classifiy images. And also developed the Api with Flask.
 
-## Motivations
+![Alt ](img/armadillo.jpeg "Title")
+## **Motivations**
 
 It is well known that once you have trained your model it is time to put it in "action". You have to integrated into a system, mantain and re-train it (between other thinigs...).
 This lead me to the idea of building this ML project which focus more on the tasks previously menioned.
-## Technologies and Teachings
+## **Technologies and Teachings**
 
-This project was full of new Teachings and Technologies. As I mentioned before, the focus was put in the Deployment. To code the Api I used the MicroService **Flask** and for the Front-end **HTML** and **CSS**. 
+This project was full of new Teachings and Technologies. As I mentioned before, the focus was put in the Deployment. To code the Api I used the MicroService **Flask** and for the Front-end **HTML**. 
 
 Then, **Redis** was used as an in-memory data structure store, and a communicator between the Api and Model services. It was very useful to mantain the clarity and tidynees of the project.
 
@@ -17,7 +18,7 @@ Once the project was finished, a Stress Testing (when you test how much users th
 Finally, a very powerful tool was used among the whole project. If you go through it you can see that each service is containerized, with its own on requeriments and dependencies on the Dockerfile.
 By now you know that I am talking about **Docker**.
 
-## Install and run
+## **Install and run**
 
 To run the services using compose:
 
@@ -31,9 +32,9 @@ To stop the services:
 $ docker-compose down
 ```
 
-## Tests
+# **Tests**
 
-### Integration end-to-end
+### **Integration end-to-end**
 
 You must have the full pipeline running and [requests](https://docs.python-requests.org/en/latest/) library installed. Then, from this project root folder run:
 
@@ -41,11 +42,11 @@ You must have the full pipeline running and [requests](https://docs.python-reque
 $ python tests/test_integration.py
 ```
 
-### Modules
+### **Modules**
 
 We make use of [multi-stage docker builds](https://docs.docker.com/develop/develop-images/multistage-build/) so we can have into the same Dockerfile environments for testing and also for deploying our service.
 
-#### Api
+#### **Api**
 
 Run:
 
@@ -85,7 +86,7 @@ $ cd model/
 $ docker build -t model_test --progress=plain --target test .
 ```
 
-## Final Comment
+## **Final Comment**
 
 I invite you to read the TableOfContents.md file to gain a wider and clearer idea of the project. Hope you enjoy and learn from it as I have done!
 ```
